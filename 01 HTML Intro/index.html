@@ -1,0 +1,218 @@
+<!-- HTML Syntax for comments -->
+<!-- Ctrl + / toggle comments-->
+
+
+<!--the doctype, document type declartion
+
+ the doctype for HTML 5 is "<!DOCTYPE html>"
+
+ default with no doctype going to assue some 
+legacy/compatible old HTML behavior -->
+<!DOCTYPE html>
+<!-- HTML element -->
+<html>
+    <!-- head element for metadata
+    data about the documents contents -->
+<head>
+    <!-- charset = character set
+        ASCII encoding baseline
+        Unicode is a namespace of characters
+        "UTF-8 is the standard encoding for Unicode" -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--title element is for the name of the tab/window-->
+    <title>Page Title</title>
+
+    <!--this defines some initial display parameters for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--import an external stylesheet (CSS file)-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <!--import an external script (JS file)-->
+    <script src="main.js"></script>
+
+    <!-- <meta name = "something">-->
+    <!--application-name --- name of Webapp-->
+    <!--author-->
+    <!--description-->
+    <!--keywords-->
+        <!--used to be for SEO - search engine optimization-->
+    <!--robots, behavior to prevent requests-->
+</head>
+
+<!-- BODY element, the page contents themselves-->
+<body style= "font-size: 10px">
+    <!--Whitespace doesnt matter-->
+    <!--it's Css job to control the layout-->
+    hello, world!
+    <br>
+    Jacob # 1
+
+    <!--Paragragh-->
+    <p>Paragragh text</p>
+
+    <!-- Headers-->
+    <h1>header 1</h1>
+    <h2>Header 2</h2>
+    <h6>header 6</h6>
+
+    <!--Image-->
+    <!--we can point to remotely hosted images at some http:// address-->
+    <!--we can also point to locally hosted images with a relative path-->
+    <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwje9b3NiaPgAhUOSK0KHRauCgQQjRx6BAgBEAU&url=https%3A%2F%2Fwww.image.ie%2F&psig=AOvVaw1O8hJl3t4qwq5OtClpjlLI&ust=1549403938265539">
+    <!--"alt" attributes for alternate text when image can't be loaded/displayed-->
+
+    <!--Hyperlink-->
+    <!--<a> = anchor tag, for hyperlinks-->
+    <a href="https://google.com">Link TO google</a>
+    <!-- we have target="_blank" for links for opening in a new tab-->
+
+    <ol><!--order list-->
+        <li><!--list item-->
+            item 1
+        </li>
+    </ol>
+    <ul><!--unordered list-->
+        <li><!--list item-->
+            item 1
+        </li>
+    </ul>
+    <!--Dictionary list (dl tag)-->
+
+    <!--br = Line break-->
+    <p>One Line <br> Two line</p>
+
+    <!--Italic-->
+    <p><em>emphasize</em>text</p>
+    <!--Bold-->
+    <p><strong>Strong</strong>text</p>
+    <!--Underlined-->
+    <p><u>Underlined</u>text</p>
+    <blockquote>
+        Indented (by default) quotation of some kind
+    </blockquote>
+    <!-- in html, we have block elements and inline elements-->
+    <!--block elements own their own vertical space-->
+        <!--example P, h1, al, li, blockquote-->
+    <!--inline elements do not happily occupy the same line-->
+        <!--examples: br, em, strong, u, img, a -->
+
+    <div>
+        div is a generic block element for anthing that doesn't alread have a tag defined
+    </div>
+
+    <span>
+        span is a generic inline element for when there is no tag for that
+    </span>
+
+    <table>
+        <thead>
+            <tr>
+                <!--Table row-->
+                <th>column1</th> <!--table header cell-->
+            </tr>
+        </thead>
+        <tbody>
+            <td>value 1</td> <!-- table data (cell)-->
+        </tbody>
+    </table>
+
+    <!--because VS code is daving this file as UTF-8-->
+    <!--AND because it's declared charset is UTF-8-->
+    <p>Chữ Nôm</p>
+    <!--character references-->
+    <!--tell the browers to render a character without-->
+    <!--literally having it in this file-->
+
+    <p>&lt;</p><!--less than-->
+    <p>&gt;</p><!--greater than-->
+    <p>&amp;</p><!-- ampersand-->
+    <p>&copy;</p><!--copyright-->
+    <!--sometimes called "HTML codes"-->
+    <!-- Non breaking space "&nbsp;" (non-breaking space)-->
+    &#1289; <!--decimal unicode reference-->
+    &#x20AB;<!--hex unicode reference-->
+
+    <select> <!-- "select lists" - drop down list-->
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+
+    <!--some new elements in HTML 5-->
+    <video></video>
+    <audio></audio>
+    <!--replace plugins like flash with native A/V support-->
+    <!--can specify more than 1 scource file with different codecs, let each browser
+    download the one it can play-->
+    <canvas></canvas>
+    <!-- area os screen to draw 'graphics primitives
+    onto, allowing some dynamic behavior, like for flash games-->
+
+    <!--accessibility bis focus for HTML 5
+    Many ARIA attributes to help screen readers etc.-->
+
+    <!---->
+    <div class="selection">
+
+    </div>
+
+    <!--block elements with a structural meaning-->
+    <section></section>
+    <article></article>
+    <header></header>
+    <footer></footer>
+    <aside></aside>
+    <nav></nav>
+
+
+    <!-- forms-->
+    <!--basic HTTP you have GET method and POST method
+    GET requests have only a URL-->
+    <!--typically forms use POST and send Key-values-->
+    <!--pairs to the sever in the HTTP requests body-->
+    <form method="GET" action ="https://google.com/search">
+        <!--input elements provide a key-value pair-->
+        <!--to the form as a whole to be submitted-->
+        <!--the key will be fom the "name" attribute-->
+        <input type="text" name="q">
+        <!--naming this one "q" is the one that google uses-->
+        <input tpe="submit">
+    </form>
+
+    <form method="POST">
+        <label for="num">Enter Number:</label>
+        <input type="number" name="num" id="num">
+
+        <label> Enter True/False:
+            <input type="checkbox" name="bool">
+        </label>
+
+        <!--HTML shorthand - for an attribute without a value the value is the shorthand-->
+        <input type="text" name="username" placeholder="Username" required minlength="6">
+        <br>
+        <input type="password" placeholder="password">
+        <br>
+        <input type="range" min="0" max="1000">
+        <br>
+        <input type="date">
+        <br>
+        <input type="color">
+        <br>
+        <input type="file">
+        <br>
+        <label> option 1:
+            <input type="radio" name="which" value="1">
+        </label>
+        <br>
+        <label> option 2:
+            <input type="radio" name="which" value="2">
+        </label>
+
+        <input type="submit">
+
+    </form>
+</body>
+</html>
