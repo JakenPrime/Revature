@@ -12,12 +12,12 @@
     <img src="D:\Revature\Notes and code\Revature\01 HTML Intro\81Le6MhlsXL._SX355_.jpg">
 
     <p>
-        <strong style="font-size: 30px">Cat Jail</strong>
+        <h1>Cat Jail</h1>
     <br>
         We patrol the country and locking up cats due to their violent nature and fondness for racism
     </p>
     <p>
-        <strong style="font-size: 20px"> Our Locations</strong>
+        <h2> Our Locations</h2>
         <br>
         <ul>
             <li>
@@ -49,14 +49,59 @@
     </p>
 
     <p>
-        <Strong style="font-size: 50px"> UPCOMING RAIDS</Strong><br>
+        <h2> UPCOMING RAIDS</h2><br>
 
         <table>
+            <thead>
+                <th>Location</th>
+                <th>Crime</th>
+            </thead>
 
+            <tbody>
+                <tr>
+                    <td>Seattle</td>
+                    <td>Racism Against a toddler</td>
+                </tr>
+                <tr>
+                    <td>Orlando</td>
+                    <td>Jaywalking</td> 
+                </tr>
+            </tbody>
         </table>
     </p>
 
-
+    <h2> Sign Up!</h2>
+    <form action="#" enctype="text/plain" method="POST">
+        <label> Name: <Input name="name" type="text"> </label>
+            <br>
+        <label>Email: <input name="email" type="email"></label>
+        <br>
+        <label> Location:
+            <select name="location">
+                <option value="sf" selected> San Fransicso</option>
+                <option value="nyc">New York </option>
+            </select>
+        </label>
+        <br>
+        <fieldset>
+            <legend>Gender: </legend>
+            <label for="female"> Female</label>
+            <input name="gender" id="female" value="female" type="radio">
+            <label for="male"> Male</label>
+            <input name="gender" id="male" value="male" type="radio">
+        </fieldset>
+        <br>
+        <label>Experience
+            <br>
+            <textarea name="experience"></textarea>
+        </label>
+        <br>
+        <button type="submit"> Sign Up</button>
+    </form>
+    <br> <br>
+    <a href="Https://www.twitter.com">Twitter</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.flickr.com">Flickr</a>
 
 
 </body>
