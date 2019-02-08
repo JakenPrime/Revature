@@ -86,7 +86,7 @@ default;
 break;
 */
 
-//we have loos, while loops and do-while loops
+//we have loops, while loops and do-while loops
 for (var i = 0; i<a0; i++)
 {
     console.log(i);

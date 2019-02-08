@@ -1,6 +1,6 @@
 'use strict';
 
-//when we standarized ES5, we fixed some issues but you have to opt in wuth use
+//when we standarized ES5, we fixed some issues but you have to opt in with 
 //'use strict' so that old code can still work the old way
 
 //you can opt in on a per function basis or on the whole file
@@ -19,7 +19,7 @@ function f(x)
 
     //this is not an error only undefined
     console.log(n);
-    //we say that the declaration ('var n) is hoisted to the top of the function
+    //we say that the declaration (var n) is hoisted to the top of the function
     if(true)
     {
         var n= 3;
@@ -28,7 +28,7 @@ function f(x)
     }
 
     //without strict mode you can set global variables so long as you dont 
-    //declare them(you leve out the var)
+    //declare them(you leave out the var)
     //asdf = 5;
     //becomes a reference error with strict mode
 
@@ -38,7 +38,7 @@ function f(x)
 f(4);
 //console.log(n); // n is out is of scope
 
-//in general strict mode turns silently thrown away erros in to real thrown errors
+//in general strict mode turns silently thrown away errors in to real thrown errors
 //if assignments fail, that's a thrown error
 
 //JavaScript does have exception throwing and handling
@@ -56,13 +56,13 @@ try{
     console.log(error);
 }
 
-//the catch block foes not run unless there was an error
+//the catch block does not run unless there was an error
 
 //ES6 added block scope to JavaScript
 //with two new ways to declare a variable let and const.
 
 //when you use "var" it's function scope (or global)
-//when you use let or const. it's block scopt (or global)
+//when you use let or const. it's block scope (or global)
 
 //always use let or const. not var
 if (true){
